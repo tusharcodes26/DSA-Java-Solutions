@@ -42,8 +42,17 @@ public class mergeSort {
         int[] arr = {5, 2, 8, 4, 1};
         Solution sol = new Solution();
 
+        System.out.println("Before Merge Sort");
+
+        for(int x : arr){
+            System.out.print(x + " ");
+        }
+        System.out.println();
+
         sol.mergeSort(arr, 0, arr.length - 1);
 
+        System.out.println("After Merge Sort");
+        
         for (int x : arr) {
             System.out.print(x + " ");
         }

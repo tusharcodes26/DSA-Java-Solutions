@@ -8,30 +8,28 @@ public class insertionSort {
                 int temp = arr[j-1];
                 arr[j-1] = arr[j];
                 arr[j] = temp;
-
                 j--;
                 System.out.println("Swapped");
         }
     }
+}
 
-        System.out.println("After Bubble sort");
-        for(int num : arr){
-            System.out.print(num + " ");
-        }
-        System.out.println();
+public static void main(String[] args) {
+    int[] arr = {6,5,4,3,2,1};
+    
+    
+    System.out.println("Before insertion sort");
+    for(int num : arr){
+        System.out.print(num + " ");
     }
+    System.out.println();
+    
+    insertionSort.sort(arr);
 
-    public static void main(String[] args) {
-        int[] arr = {6,5,4,3,2,1};
-        
-        insertionSort sorter = new insertionSort();
-
-        System.out.println("Before Bubble sort");
-        for(int num : arr){
-            System.out.print(num + " ");
-        }
-        System.out.println();
-        
-        sorter.sort(arr);
+    System.out.println("After insertion sort");
+    for(int num : arr){
+        System.out.print(num + " ");
+    }
+    System.out.println();
     }
 }

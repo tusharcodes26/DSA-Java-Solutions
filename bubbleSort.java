@@ -13,22 +13,15 @@ public class bubbleSort {
                 }
             }
             if(!didSwap){
-                break;
+                return;
             }
             System.out.println("Swaped");
         }
-
-        System.out.println("After Bubble sort");
-        for(int num : arr){
-            System.out.print(num + " ");
-        }
-        System.out.println();
     }
 
     public static void main(String[] args) {
         int[] arr = {6,5,4,3,2,1};
-        
-        bubbleSort sorter = new bubbleSort();
+        // int[] arr = {1,2,3,4,5,6};
 
         System.out.println("Before Bubble sort");
         for(int num : arr){
@@ -36,6 +29,12 @@ public class bubbleSort {
         }
         System.out.println();
         
-        sorter.sort(arr);
+        sort(arr);
+
+        System.out.println("After Bubble sort");
+        for(int num : arr){
+            System.out.print(num + " ");
+        }
+        System.out.println();
     }
 }
