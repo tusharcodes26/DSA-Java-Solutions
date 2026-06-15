@@ -2,16 +2,6 @@
 import java.util.Arrays;
 
 public class quickSort {
-    public static void sort(int[] arr, int low, int high){
-        if(low < high){
-            int pivotIndex = partition(arr, low, high);
-
-            sort(arr, low, pivotIndex - 1);
-            sort(arr, pivotIndex + 1, high);
-        }
-    }
-
-    
     public static int partition(int[] arr, int low, int high){
         
         int pivot = arr[high];
@@ -29,6 +19,17 @@ public class quickSort {
         
         return i + 1;
     }
+    
+    public static void sort(int[] arr, int low, int high){
+        if(low < high){
+            int pivotIndex = partition(arr, low, high);
+
+            sort(arr, low, pivotIndex - 1);
+            sort(arr, pivotIndex + 1, high);
+        }
+    }
+
+    
     
     private static void swap(int[] arr, int i, int j) {
     int temp = arr[i];

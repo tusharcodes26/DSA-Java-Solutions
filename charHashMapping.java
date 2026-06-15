@@ -16,7 +16,7 @@ public class charHashMapping {
             mp.put(ch, mp.getOrDefault(ch, 0) + 1);
         }
 
-        System.out.print("How many characters to check? ");
+        System.out.print("How many characters to check?");
         int q = sc.nextInt();
 
         System.out.println("\nFrequencies:");
