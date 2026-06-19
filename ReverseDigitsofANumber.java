@@ -1,5 +1,5 @@
 public class ReverseDigitsofANumber {
-    public static int reverseDigits(int n){
+    public int reverseDigits(int n){
         
         int revNum = 0;
 

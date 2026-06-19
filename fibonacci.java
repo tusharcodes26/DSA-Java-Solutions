@@ -1,5 +1,5 @@
 public class fibonacci{
-    public static int number(int n){
+    public int number(int n){
         if(n <= 1){
             return n;
         }

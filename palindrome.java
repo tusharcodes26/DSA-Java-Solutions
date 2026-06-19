@@ -1,7 +1,7 @@
 
 
 public class palindrome {
-    public static int reverseNum(int n){
+    public int reverseNum(int n){
 
         int revNum = 0;
         int dup = n;

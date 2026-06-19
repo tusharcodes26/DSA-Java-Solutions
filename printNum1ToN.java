@@ -1,5 +1,5 @@
 public class printNum1ToN {
-    public static void printNum(int curr, int n){
+    public void printNum(int curr, int n){
         if(curr > n){
             return;
         }

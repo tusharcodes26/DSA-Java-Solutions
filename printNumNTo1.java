@@ -1,5 +1,5 @@
 public class printNumNTo1 {
-    public static void printNum(int n){
+    public void printNum(int n){
         if(n < 1){
             return;
         }

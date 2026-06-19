@@ -18,7 +18,6 @@ public class greatestCommonDivisor {
     }
 
     public static void main(String[] args) {
-        greatestCommonDivisor obj = new greatestCommonDivisor();
         int n1 = 49, n2 = 42;
         int gcd = findGcd(n1, n2);
         System.out.println("GCD of " + n1 + " and " + n2 + " is: " + gcd);

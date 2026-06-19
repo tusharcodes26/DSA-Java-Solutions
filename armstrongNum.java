@@ -21,7 +21,6 @@ public class armstrongNum {
     }
 
     public static void main(String[] args) {
-        armstrongNum obj = new armstrongNum();
 
         int num = 153;
 
