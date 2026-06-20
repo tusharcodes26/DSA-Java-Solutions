@@ -99,7 +99,7 @@ public class setMatrixZero{
                 matrix[i][0] = 0;
             }
         }
-        if(firstRowZero){git
+        if(firstRowZero){
             for(int j = 0; j < n; j++){
                 matrix[0][j] = 0;
             }
