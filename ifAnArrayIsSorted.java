@@ -13,7 +13,7 @@ public class ifAnArrayIsSorted {
 
     public static void main(String[] args){
 
-        int[] arr = {1,2,2,3,5};
+        int[] arr = {3,4,5,1,2};
         int n = arr.length;
 
         ifAnArrayIsSorted obj = new ifAnArrayIsSorted();
