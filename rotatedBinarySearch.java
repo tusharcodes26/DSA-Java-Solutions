@@ -24,7 +24,7 @@ public class rotatedBinarySearch {
 
     public static void main(String[] args) {
         int[] nums = {4,5,6,7,0,1,2};
-        int target = 0;
+        int target = 7;
 
         rotatedBinarySearch obj = new rotatedBinarySearch();
         int result = obj.search(nums, target);
@@ -32,6 +32,6 @@ public class rotatedBinarySearch {
         if (result == -1)
             System.out.println("The target is not present.");
         else
-            System.out.println("The target is at indetarget: " + result);
+            System.out.println("The target is at index: " + result);
     }
 }
