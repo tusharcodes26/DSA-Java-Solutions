@@ -166,6 +166,19 @@ public class linkedList {
         return head;
     }
 
+    private static Node reverseLL(Node head){
+        Node prev = null;
+        Node temp = head;
+
+        while(temp != null){
+            Node front = temp.next;
+            temp.next = prev;
+            prev = temp;
+            temp = front;
+        }
+        return prev;
+    }
+
     
     private static void print(Node head){
         Node temp = head;
@@ -209,6 +222,10 @@ public class linkedList {
         
         head = insertBeforeK(head, 6, 9);
         print(head);
+        
+        head = reverseLL(head);
+        print(head);
+
     }
 }
 
