@@ -10,7 +10,7 @@ public class bitDivide {
         long n = Math.abs((long)dividend);
         long d = Math.abs((long)divisor);
 
-        long ans = 0;
+        long res = 0;
         
         while(n >= d){
             
@@ -19,20 +19,20 @@ public class bitDivide {
                 cnt++;
 
             }
-                ans +=  (1L << cnt);
+                res +=  (1L << cnt);
                 n -= (d << cnt);
         }
 
-        ans = isPositive ? ans : -ans;
+        res = isPositive ? res : -res;
 
-        if(ans > Integer.MAX_VALUE){
+        if(res > Integer.MAX_VALUE){
             return Integer.MAX_VALUE;
         }
-        if(ans < Integer.MIN_VALUE){
+        if(res < Integer.MIN_VALUE){
             return Integer.MIN_VALUE;
         }
 
-        return (int) ans;
+        return (int) res;
     }
 
      public static void main(String[] args) {
@@ -40,10 +40,10 @@ public class bitDivide {
     
         bitDivide sol = new bitDivide();
         
-        int ans = sol.divide(dividend, divisor);
+        int res = sol.divide(dividend, divisor);
         
         System.out.println("The result of dividing " 
                            + dividend + " and " 
-                           + divisor + " is " + ans);
+                           + divisor + " is " + res);
     }
 }
