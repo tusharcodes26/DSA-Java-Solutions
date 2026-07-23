@@ -2,7 +2,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class subarraySumEqualsK {
+public class subarraySumK {
     
     // Bruteb Force
     // public int sum(int[] arr, int k){
@@ -23,34 +23,33 @@ public class subarraySumEqualsK {
     public int sum(int[] arr, int k){
         int n = arr.length;
         int count = 0;
+        int[] prefix = new int[n];
 
-        int[] prefixSum = new int[n];
-
-        prefixSum[0] = arr[0];
+        prefix[0] = arr[0];
         for(int i = 1; i < n; i++){
-            prefixSum[i] = prefixSum[i-1] + arr[i];
+            prefix[i] = prefix[i-1] + arr[i];
         }
 
         Map<Integer, Integer> m = new HashMap<>();
 
         for(int j = 0; j < n; j++){
-            if(prefixSum[j] == k) count++;
+            if(prefix[j] == k) count++;
 
-            int val = prefixSum[j] - k;
+            int val = prefix[j] - k;
+
             if(m.containsKey(val)){
                 count += m.get(val);
             }
-
-            m.put(prefixSum[j], m.getOrDefault(prefixSum[j], 0) + 1);
+            m.put(prefix[j], m.getOrDefault(prefix[j], 0) + 1);
         }
-
         return count;
     }
+
     public static void main(String[] args) {
-        int[] arr = {1,2,1,2,1};
+        int[] arr = {1,2,3};
         int k = 3;
 
-        subarraySumEqualsK sol = new subarraySumEqualsK();
+        subarraySumK sol = new subarraySumK();
 
         int len = sol.sum(arr, k);
 

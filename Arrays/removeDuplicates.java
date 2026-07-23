@@ -1,10 +1,10 @@
 public class removeDuplicates {
-    public int dupli(int[] arr, int n){
+    public int dupli(int[] arr){
         
         if (arr.length == 0) return 0;
         
         int i = 0;
-        for(int j = 1; j < n; j++){
+        for(int j = 1; j < arr.length; j++){
             if(arr[i] != arr[j]){
                 i++;
                 arr[i] = arr[j];
@@ -19,7 +19,7 @@ public class removeDuplicates {
 
         removeDuplicates obj = new removeDuplicates();
 
-        int k = obj.dupli(arr, n);
+        int k = obj.dupli(arr);
 
         System.out.println("Unique count: " + k);
         System.out.println("Array after removing duplicates: ");
